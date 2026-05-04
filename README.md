@@ -1,7 +1,7 @@
 # Lab 18: Production RAG Pipeline
 
 **AICB-P2T3 · Ngày 18 · Production RAG**  
-**Student:** 2A202600218-Nguyễn Tiến Đạt**  
+**Student: 2A202600218-Nguyễn Tiến Đạt**  
 **Giảng viên:** M.Sc Trần Minh Tú · **Thời gian:** 2 giờ
 
 
