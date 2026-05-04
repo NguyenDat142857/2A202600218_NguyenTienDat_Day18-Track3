@@ -10,7 +10,16 @@
 ![alt text]({11D8A021-EBDD-4A12-80E4-817D4DA667AD}.png)
 ![alt text]({D5F681F5-CBCF-47C4-9A31-0D093BE7EDB1}.png)
 
-![alt text]({11D8A021-EBDD-4A12-80E4-817D4DA667AD}.png)
+## 🧪 Results
+
+### Naive RAG
+![Naive RAG](images/naive.png)
+
+### Advanced RAG
+![Advanced RAG](images/advanced.png)
+
+### Comparison
+![Comparison](images/comparison.png)
 
 ## Tổng quan
 
