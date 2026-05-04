@@ -1,0 +1,81 @@
+{
+  "aggregate": {
+    "faithfulness": 0.0936,
+    "answer_relevancy": 0.1966,
+    "context_precision": 0.0422,
+    "context_recall": 0.0421
+  },
+  "num_questions": 20,
+  "failures": [
+    {
+      "question": "Doanh thu bán ra là bao nhiêu?",
+      "worst_metric": "answer_relevancy",
+      "score": 0.0,
+      "diagnosis": "Answer not aligned with question",
+      "suggested_fix": "Improve prompt template"
+    },
+    {
+      "question": "Thuế suất áp dụng cho hàng hóa bán ra là bao nhiêu?",
+      "worst_metric": "answer_relevancy",
+      "score": 0.0,
+      "diagnosis": "Answer not aligned with question",
+      "suggested_fix": "Improve prompt template"
+    },
+    {
+      "question": "Nghị định 13 được ban hành vào ngày nào?",
+      "worst_metric": "answer_relevancy",
+      "score": 0.0,
+      "diagnosis": "Answer not aligned with question",
+      "suggested_fix": "Improve prompt template"
+    },
+    {
+      "question": "Mã số thuế của công ty là bao nhiêu?",
+      "worst_metric": "answer_relevancy",
+      "score": 0.0,
+      "diagnosis": "Answer not aligned with question",
+      "suggested_fix": "Improve prompt template"
+    },
+    {
+      "question": "Vector database dùng để làm gì?",
+      "worst_metric": "context_precision",
+      "score": 0.0157,
+      "diagnosis": "Too many irrelevant chunks",
+      "suggested_fix": "Use reranking or filtering"
+    },
+    {
+      "question": "Bước đầu tiên trong quy trình RAG là gì?",
+      "worst_metric": "context_recall",
+      "score": 0.0079,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or retrieval"
+    },
+    {
+      "question": "Thuế GTGT phát sinh trong kỳ là bao nhiêu?",
+      "worst_metric": "context_recall",
+      "score": 0.0196,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or retrieval"
+    },
+    {
+      "question": "Thuế GTGT đầu ra là bao nhiêu?",
+      "worst_metric": "context_recall",
+      "score": 0.0196,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or retrieval"
+    },
+    {
+      "question": "Thuế GTGT phải nộp là bao nhiêu?",
+      "worst_metric": "context_recall",
+      "score": 0.0196,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or retrieval"
+    },
+    {
+      "question": "Thuế GTGT đầu vào là bao nhiêu?",
+      "worst_metric": "context_recall",
+      "score": 0.0222,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or retrieval"
+    }
+  ]
+}

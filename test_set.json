@@ -1,3 +1,82 @@
 [
-  {"question": "hihi cả nhà tự tạo testset bằng cơm nhé", "ground_truth": "Không kịp tạo luôn"},
+  {
+    "question": "Tên doanh nghiệp trong tờ khai thuế là gì?",
+    "ground_truth": "Công ty Cổ phần DHA Surfaces"
+  },
+  {
+    "question": "Mã số thuế của công ty là bao nhiêu?",
+    "ground_truth": "0106769437"
+  },
+  {
+    "question": "Kỳ tính thuế của tờ khai là khi nào?",
+    "ground_truth": "Quý 4 năm 2024"
+  },
+  {
+    "question": "Tổng giá trị hàng hóa mua vào là bao nhiêu?",
+    "ground_truth": "2.405.743.241 VND"
+  },
+  {
+    "question": "Thuế GTGT đầu vào là bao nhiêu?",
+    "ground_truth": "215.163.767 VND"
+  },
+  {
+    "question": "Doanh thu bán ra là bao nhiêu?",
+    "ground_truth": "3.703.688.610 VND"
+  },
+  {
+    "question": "Thuế GTGT đầu ra là bao nhiêu?",
+    "ground_truth": "344.675.400 VND"
+  },
+  {
+    "question": "Thuế GTGT phát sinh trong kỳ là bao nhiêu?",
+    "ground_truth": "129.511.633 VND"
+  },
+  {
+    "question": "Thuế GTGT phải nộp là bao nhiêu?",
+    "ground_truth": "52.133.830 VND"
+  },
+  {
+    "question": "Thuế suất áp dụng cho hàng hóa bán ra là bao nhiêu?",
+    "ground_truth": "10%"
+  },
+  {
+    "question": "Nghị định 13/2023/NĐ-CP nói về vấn đề gì?",
+    "ground_truth": "Bảo vệ dữ liệu cá nhân"
+  },
+  {
+    "question": "Nghị định 13 được ban hành vào ngày nào?",
+    "ground_truth": "17/04/2023"
+  },
+  {
+    "question": "Cơ quan nào ban hành Nghị định 13?",
+    "ground_truth": "Chính phủ Việt Nam"
+  },
+  {
+    "question": "Nghị định 13 áp dụng cho những đối tượng nào?",
+    "ground_truth": "Cơ quan, tổ chức, cá nhân Việt Nam và nước ngoài có liên quan đến xử lý dữ liệu tại Việt Nam"
+  },
+  {
+    "question": "Dữ liệu cá nhân là gì?",
+    "ground_truth": "Là thông tin liên quan đến cá nhân có thể xác định danh tính của một người"
+  },
+  {
+    "question": "RAG là gì?",
+    "ground_truth": "RAG là phương pháp kết hợp truy xuất dữ liệu và sinh văn bản"
+  },
+  {
+    "question": "Bước đầu tiên trong quy trình RAG là gì?",
+    "ground_truth": "Chunking"
+  },
+  {
+    "question": "Embedding dùng để làm gì?",
+    "ground_truth": "Chuyển văn bản thành vector để xử lý và tìm kiếm"
+  },
+  {
+    "question": "Vector database dùng để làm gì?",
+    "ground_truth": "Lưu trữ và tìm kiếm các vector embedding"
+  },
+  {
+    "question": "RAG giúp cải thiện điều gì?",
+    "ground_truth": "Tăng độ chính xác và giảm hallucination"
+  }
 ]

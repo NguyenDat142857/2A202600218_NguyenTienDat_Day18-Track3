@@ -10,6 +10,14 @@ Usage:
 import json
 import os
 import time
+import shutil
+
+
+def safe_move(src: str, dst: str):
+    """Move file safely (overwrite if exists)."""
+    if os.path.exists(dst):
+        os.remove(dst)
+    shutil.move(src, dst)
 
 
 def main():
@@ -20,27 +28,37 @@ def main():
 
     os.makedirs("reports", exist_ok=True)
 
-    # Step 1: Basic Baseline
+    # ==============================
+    # STEP 1: BASELINE
+    # ==============================
     print("\n📌 STEP 1: Running Basic RAG Baseline...")
     print("-" * 40)
     from naive_baseline import main as run_baseline
     run_baseline()
 
-    # Step 2: Production Pipeline
+    # ==============================
+    # STEP 2: PRODUCTION
+    # ==============================
     print("\n📌 STEP 2: Running Production Pipeline...")
     print("-" * 40)
     from src.pipeline import build_pipeline, evaluate_pipeline
+
     search, reranker = build_pipeline()
     prod_results = evaluate_pipeline(search, reranker)
 
-    # Move reports to reports/
+    # ==============================
+    # MOVE REPORTS (FIX BUG)
+    # ==============================
     for f in ["ragas_report.json", "naive_baseline_report.json"]:
         if os.path.exists(f):
-            os.rename(f, f"reports/{f}")
+            safe_move(f, f"reports/{f}")
 
-    # Step 3: Comparison
+    # ==============================
+    # STEP 3: COMPARISON
+    # ==============================
     print("\n📌 STEP 3: Comparison")
     print("-" * 40)
+
     naive_path = "reports/naive_baseline_report.json"
     prod_path = "reports/ragas_report.json"
 
@@ -52,19 +70,21 @@ def main():
 
         print(f"\n{'Metric':<25} {'Basic':>8} {'Production':>12} {'Δ':>8}")
         print("-" * 55)
+
         for m in ["faithfulness", "answer_relevancy", "context_precision", "context_recall"]:
             n = naive.get("aggregate", {}).get(m, 0)
             p = prod.get("aggregate", {}).get(m, 0)
             d = p - n
-            status = "✓" if p >= 0.75 else " "
+            status = "✓" if p >= 0.75 else "✗"
             print(f"{status} {m:<23} {n:>8.4f} {p:>12.4f} {d:>+8.4f}")
 
     elapsed = time.time() - start
     print(f"\n⏱️  Total time: {elapsed:.1f}s")
+
     print("\n📋 Next steps:")
     print("  1. Điền analysis/failure_analysis.md")
     print("  2. Điền analysis/group_report.md")
-    print("  3. Viết analysis/reflections/reflection_[Tên].md")
+    print("  3. Viết reflection")
     print("  4. Chạy: python check_lab.py")
 
 

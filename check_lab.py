@@ -55,21 +55,34 @@ def run_tests() -> tuple[int, int]:
     """Run pytest and return (passed, total)."""
     try:
         result = subprocess.run(
-            [sys.executable, "-m", "pytest", "tests/", "-v", "--tb=no", "-q"],
-            capture_output=True, text=True, timeout=120,
+            [sys.executable, "-m", "pytest", "tests/", "-q"],
+            capture_output=True,
+            text=True,
+            timeout=120,
         )
-        lines = result.stdout.strip().split("\n")
-        summary = lines[-1] if lines else ""
-        # Parse "X passed, Y failed" or "X passed"
-        passed = total = 0
-        for part in summary.split(","):
-            part = part.strip()
-            if "passed" in part:
-                passed = int(part.split()[0])
-                total += passed
-            if "failed" in part:
-                total += int(part.split()[0])
+
+        output = result.stdout.strip()
+
+        # Ví dụ output:
+        # "34 passed, 3 failed in 80.60s"
+        import re
+
+        passed = 0
+        failed = 0
+
+        match_pass = re.search(r"(\d+)\s+passed", output)
+        match_fail = re.search(r"(\d+)\s+failed", output)
+
+        if match_pass:
+            passed = int(match_pass.group(1))
+
+        if match_fail:
+            failed = int(match_fail.group(1))
+
+        total = passed + failed
+
         return passed, total
+
     except Exception as e:
         print(f"  ⚠️  pytest error: {e}")
         return 0, 0
