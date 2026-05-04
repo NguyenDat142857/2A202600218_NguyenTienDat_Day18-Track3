@@ -6,11 +6,11 @@
 ---
 
 ## 🧪 Kết quả:
-### OutPut python main.py
+### Output python main.py
 ![result 1](Pic_result/{FA624B69-19A2-4F9B-B084-27EDFFDFD03A}.png)
-### OutPut 5 test chính
+### Output 5 test m1->m5:
 ![result 2](Pic_result/{11D8A021-EBDD-4A12-80E4-817D4DA667AD}.png)
-### OutPut check_lab.py
+### Output check_lab.py
 ![result 3](Pic_result/{D5F681F5-CBCF-47C4-9A31-0D093BE7EDB1}.png)
 
 ## Tổng quan
